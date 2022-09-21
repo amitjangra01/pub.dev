@@ -1,0 +1,46 @@
+{
+  "project_info": {
+    "project_number": "604139701191",
+    "project_id": "vip-number-2ba67",
+    "storage_bucket": "vip-number-2ba67.appspot.com"
+  },
+  "client": [
+    {
+      "client_info": {
+        "mobilesdk_app_id": "1:604139701191:android:182028bcb79e46703d4fe2",
+        "android_client_info": {
+          "package_name": "com.example.vipNumber"
+        }
+      },
+      "oauth_client": [
+        {
+          "client_id": "604139701191-hagpjtdpsaenu7rm1bae7d41ldfdn1nd.apps.googleusercontent.com",
+          "client_type": 3
+        }
+      ],
+      "api_key": [
+        {
+          "current_key": "AIzaSyDlyeUGbCZ5XK7no_wTc8d57MvW_mHBUJI"
+        }
+      ],
+      "services": {
+        "appinvite_service": {
+          "other_platform_oauth_client": [
+            {
+              "client_id": "604139701191-hagpjtdpsaenu7rm1bae7d41ldfdn1nd.apps.googleusercontent.com",
+              "client_type": 3
+            },
+            {
+              "client_id": "604139701191-6eeoic5p56pm04boof4jadj14eb9nmph.apps.googleusercontent.com",
+              "client_type": 2,
+              "ios_info": {
+                "bundle_id": "com.example.vipNumber"
+              }
+            }
+          ]
+        }
+      }
+    }
+  ],
+  "configuration_version": "1"
+}
