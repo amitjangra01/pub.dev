@@ -1,0 +1,198 @@
+{
+  "score": {
+    "grantedPoints": 140,
+    "maxPoints": 140,
+    "likeCount": 3157,
+    "popularityScore": 0.9996524308120085,
+    "tags": [
+      "is:flutter-favorite",
+      "publisher:flutter.dev",
+      "sdk:flutter",
+      "platform:android",
+      "platform:ios",
+      "platform:windows",
+      "platform:linux",
+      "platform:macos",
+      "is:plugin",
+      "is:null-safe",
+      "license:bsd-3-clause",
+      "license:fsf-libre",
+      "license:osi-approved"
+    ],
+    "lastUpdated": "2022-09-22T02:49:31.187712Z"
+  },
+  "scorecard": {
+    "packageName": "path_provider",
+    "packageVersion": "2.0.11",
+    "runtimeVersion": "2022.09.14",
+    "updated": "2022-09-22T02:49:31.187712Z",
+    "packageCreated": "2017-05-03T13:02:53.268921Z",
+    "packageVersionCreated": "2022-06-06T20:03:59.110193Z",
+    "flags": [
+      "latest-stable",
+      "uses-flutter"
+    ],
+    "dartdocReport": {
+      "timestamp": "2022-09-15T15:48:09.184782Z",
+      "reportStatus": "success",
+      "dartdocEntry": {
+        "uuid": "5c0fd005-62b1-443e-8355-11e74d5e0cd8",
+        "packageName": "path_provider",
+        "packageVersion": "2.0.11",
+        "isLatest": true,
+        "isObsolete": false,
+        "usesFlutter": true,
+        "runtimeVersion": "2022.09.14",
+        "sdkVersion": "2.18.0",
+        "dartdocVersion": "6.0.1",
+        "flutterVersion": "3.3.2",
+        "timestamp": "2022-09-15T15:48:06.834370Z",
+        "runDuration": 110687606,
+        "depsResolved": true,
+        "hasContent": true,
+        "archiveSize": 150038,
+        "totalSize": 559114,
+        "blobSize": 176650,
+        "blobIndexSize": 1250
+      },
+      "documentationSection": {
+        "id": "documentation",
+        "title": "Provide documentation",
+        "grantedPoints": 10,
+        "maxPoints": 10,
+        "status": "passed",
+        "summary": "### [*] 10/10 points: 20% or more of the public API has dartdoc comments\n\n* 12 out of 14 API elements (85.7 %) have documentation comments."
+      }
+    },
+    "panaReport": {
+      "timestamp": "2022-09-22T02:49:31.145530Z",
+      "panaRuntimeInfo": {
+        "panaVersion": "0.21.17",
+        "sdkVersion": "2.18.0",
+        "flutterVersions": {
+          "frameworkVersion": "3.3.2",
+          "channel": "unknown",
+          "repositoryUrl": "unknown source",
+          "frameworkRevision": "e3c29ec00c9c825c891d75054c63fcc46454dca1",
+          "frameworkCommitDate": "2022-09-14 08:46:55 -0500",
+          "engineRevision": "a4ff2c53d84ca78702bc3be6c7ef0788ffca01d3",
+          "dartSdkVersion": "2.18.1",
+          "devToolsVersion": "2.15.0",
+          "flutterRoot": "/tool/stable/flutter"
+        }
+      },
+      "reportStatus": "success",
+      "derivedTags": [
+        "sdk:flutter",
+        "platform:android",
+        "platform:ios",
+        "platform:windows",
+        "platform:linux",
+        "platform:macos",
+        "is:plugin",
+        "is:null-safe",
+        "license:bsd-3-clause",
+        "license:fsf-libre",
+        "license:osi-approved"
+      ],
+      "allDependencies": [
+        "characters",
+        "collection",
+        "ffi",
+        "file",
+        "flutter",
+        "flutter_driver",
+        "flutter_test",
+        "integration_test",
+        "material_color_utilities",
+        "meta",
+        "path",
+        "path_provider_android",
+        "path_provider_ios",
+        "path_provider_linux",
+        "path_provider_macos",
+        "path_provider_platform_interface",
+        "path_provider_windows",
+        "platform",
+        "plugin_platform_interface",
+        "process",
+        "sky_engine",
+        "test",
+        "vector_math",
+        "win32",
+        "xdg_directories"
+      ],
+      "licenses": [
+        {
+          "path": "LICENSE",
+          "spdxIdentifier": "BSD-3-Clause"
+        }
+      ],
+      "report": {
+        "sections": [
+          {
+            "id": "convention",
+            "title": "Follow Dart file conventions",
+            "grantedPoints": 30,
+            "maxPoints": 30,
+            "status": "passed",
+            "summary": "### [*] 10/10 points: Provide a valid `pubspec.yaml`\n\n\n### [*] 5/5 points: Provide a valid `README.md`\n\n\n### [*] 5/5 points: Provide a valid `CHANGELOG.md`\n\n\n### [*] 10/10 points: Use an OSI-approved license\n\nDetected license: `BSD-3-Clause`."
+          },
+          {
+            "id": "documentation",
+            "title": "Provide documentation",
+            "grantedPoints": 10,
+            "maxPoints": 10,
+            "status": "passed",
+            "summary": "### [*] 10/10 points: Package has an example\n"
+          },
+          {
+            "id": "platform",
+            "title": "Platform support",
+            "grantedPoints": 20,
+            "maxPoints": 20,
+            "status": "passed",
+            "summary": "### [*] 20/20 points: Supports 5 of 6 possible platforms (**iOS**, **Android**, Web, **Windows**, **MacOS**, **Linux**)\n\n* ✓ Android\n* ✓ iOS\n* ✓ Windows\n* ✓ Linux\n* ✓ MacOS\n\nThese platforms are not supported:\n\n<details>\n<summary>\nPackage does not support platform `Web`.\n</summary>\n\nBecause:\n* `package:path_provider/path_provider.dart` that declares support for platforms: `Android`, `iOS`, `Windows`, `Linux`, `macOS`.\n</details>"
+          },
+          {
+            "id": "analysis",
+            "title": "Pass static analysis",
+            "grantedPoints": 30,
+            "maxPoints": 30,
+            "status": "passed",
+            "summary": "### [*] 30/30 points: code has no errors, warnings, lints, or formatting issues\n"
+          },
+          {
+            "id": "dependency",
+            "title": "Support up-to-date dependencies",
+            "grantedPoints": 20,
+            "maxPoints": 20,
+            "status": "passed",
+            "summary": "### [*] 10/10 points: All of the package dependencies are supported in the latest version\n\n|Package|Constraint|Compatible|Latest|\n|:-|:-|:-|:-|\n|[`flutter`]|`flutter`|0.0.0|0.0.0|\n|[`path_provider_android`]|`^2.0.6`|2.0.20|2.0.20|\n|[`path_provider_ios`]|`^2.0.6`|2.0.11|2.0.11|\n|[`path_provider_linux`]|`^2.0.1`|2.1.7|2.1.7|\n|[`path_provider_macos`]|`^2.0.0`|2.0.6|2.0.6|\n|[`path_provider_platform_interface`]|`^2.0.0`|2.0.4|2.0.4|\n|[`path_provider_windows`]|`^2.0.2`|2.1.3|2.1.3|\n\n<details><summary>Transitive dependencies</summary>\n\n|Package|Constraint|Compatible|Latest|\n|:-|:-|:-|:-|\n|[`characters`]|-|1.2.1|1.2.1|\n|[`collection`]|-|1.16.0|1.16.0|\n|[`ffi`]|-|2.0.1|2.0.1|\n|[`file`]|-|6.1.4|6.1.4|\n|[`material_color_utilities`]|-|0.1.5|0.2.0|\n|[`meta`]|-|1.8.0|1.8.0|\n|[`path`]|-|1.8.2|1.8.2|\n|[`platform`]|-|3.1.0|3.1.0|\n|[`plugin_platform_interface`]|-|2.1.3|2.1.3|\n|[`process`]|-|4.2.4|4.2.4|\n|[`sky_engine`]|-|0.0.99|0.0.99|\n|[`vector_math`]|-|2.1.2|2.1.4|\n|[`win32`]|-|3.0.0|3.0.0|\n|[`xdg_directories`]|-|0.2.0+2|0.2.0+2|\n</details>\n\nTo reproduce run `dart pub outdated --no-dev-dependencies --up-to-date --no-dependency-overrides`.\n\n[`flutter`]: https://pub.dev/packages/flutter\n[`path_provider_android`]: https://pub.dev/packages/path_provider_android\n[`path_provider_ios`]: https://pub.dev/packages/path_provider_ios\n[`path_provider_linux`]: https://pub.dev/packages/path_provider_linux\n[`path_provider_macos`]: https://pub.dev/packages/path_provider_macos\n[`path_provider_platform_interface`]: https://pub.dev/packages/path_provider_platform_interface\n[`path_provider_windows`]: https://pub.dev/packages/path_provider_windows\n[`characters`]: https://pub.dev/packages/characters\n[`collection`]: https://pub.dev/packages/collection\n[`ffi`]: https://pub.dev/packages/ffi\n[`file`]: https://pub.dev/packages/file\n[`material_color_utilities`]: https://pub.dev/packages/material_color_utilities\n[`meta`]: https://pub.dev/packages/meta\n[`path`]: https://pub.dev/packages/path\n[`platform`]: https://pub.dev/packages/platform\n[`plugin_platform_interface`]: https://pub.dev/packages/plugin_platform_interface\n[`process`]: https://pub.dev/packages/process\n[`sky_engine`]: https://pub.dev/packages/sky_engine\n[`vector_math`]: https://pub.dev/packages/vector_math\n[`win32`]: https://pub.dev/packages/win32\n[`xdg_directories`]: https://pub.dev/packages/xdg_directories\n\n\n### [*] 10/10 points: Package supports latest stable Dart and Flutter SDKs\n"
+          },
+          {
+            "id": "null-safety",
+            "title": "Support sound null safety",
+            "grantedPoints": 20,
+            "maxPoints": 20,
+            "status": "passed",
+            "summary": "### [*] 20/20 points: Package and dependencies are fully migrated to null safety!\n"
+          }
+        ]
+      },
+      "result": {
+        "repositoryUrl": "https://github.com/flutter/plugins/tree/main/packages/path_provider/path_provider",
+        "issueTrackerUrl": "https://github.com/flutter/flutter/issues?q=is%3Aissue+is%3Aopen+label%3A%22p%3A+path_provider%22",
+        "repository": {
+          "provider": "github",
+          "host": "github.com",
+          "repository": "flutter/plugins",
+          "branch": "main",
+          "path": "packages/path_provider/path_provider"
+        }
+      },
+      "screenshots": [""],
+      "urlProblems": [""]
+    }
+  }
+}

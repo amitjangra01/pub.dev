@@ -6,7 +6,7 @@ part of 'packages_response.dart';
 // JsonSerializableGenerator
 // **************************************************************************
 
-AllPackagesResponse _$PackagesResponseFromJson(Map<String, dynamic> json) =>
+AllPackagesResponse _$AllPackagesResponseFromJson(Map<String, dynamic> json) =>
     AllPackagesResponse(
       nextUrl: json['next_url'] as String?,
       packages: (json['packages'] as List<dynamic>?)
@@ -14,7 +14,8 @@ AllPackagesResponse _$PackagesResponseFromJson(Map<String, dynamic> json) =>
           .toList(),
     );
 
-Map<String, dynamic> _$PackagesResponseToJson(AllPackagesResponse instance) =>
+Map<String, dynamic> _$AllPackagesResponseToJson(
+        AllPackagesResponse instance) =>
     <String, dynamic>{
       'next_url': instance.nextUrl,
       'packages': instance.packages,

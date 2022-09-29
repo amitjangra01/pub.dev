@@ -1,6 +1,6 @@
 import 'package:json_annotation/json_annotation.dart';
 
-import 'package.dart';
+import '../package_response/package.dart';
 
 part 'packages_response.g.dart';
 
@@ -13,8 +13,8 @@ class AllPackagesResponse {
   AllPackagesResponse({this.nextUrl, this.packages});
 
   factory AllPackagesResponse.fromJson(Map<String, dynamic> json) {
-    return _$PackagesResponseFromJson(json);
+    return _$AllPackagesResponseFromJson(json);
   }
 
-  Map<String, dynamic> toJson() => _$PackagesResponseToJson(this);
+  Map<String, dynamic> toJson() => _$AllPackagesResponseToJson(this);
 }

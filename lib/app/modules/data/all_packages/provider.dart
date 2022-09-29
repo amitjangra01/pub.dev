@@ -2,8 +2,7 @@ import 'package:dio/dio.dart';
 import 'package:riverpod/riverpod.dart';
 // ignore: depend_on_referenced_packages
 import 'package:pretty_dio_logger/pretty_dio_logger.dart';
-
-import '../all_packages_response/packages_response.dart';
+import '../response/all_packages_response/packages_response.dart';
 
 final packageListProvider = FutureProvider<AllPackagesResponse?>((ref) async {
   final Dio dio = ref.watch(
