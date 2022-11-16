@@ -1,23 +1,81 @@
+import 'package:dio/dio.dart';
 import 'package:flutter_riverpod/flutter_riverpod.dart';
-import 'package:vip_number/app/modules/data/response/all_packages_response/packages_response.dart';
+import 'package:vip_number/app/modules/data/search/search_model.dart';
 
+class SearchState extends StateNotifier<SearchModel?> {
+  SearchState() : super(null);
 
-class SearchState extends StateNotifier<List<AllPackagesResponse>> {
-  SearchState() : super([]);
+  SearchModel? get searchResults => state;
 
-  List<AllPackagesResponse> get searchResults => state;
-
-  Future<void> search(String query, String packageName) async {
+  Future<void> search({
+    required int page,
+    required String query,
+  }) async {
     if (query.isEmpty) {
-      state = [];
+      state = null;
       return;
     }
 
-    
-    
+    final Dio dio = Dio(
+      BaseOptions(baseUrl: 'https://pub.dartlang.org/api'),
+    );
+
+    final packageResponse = await dio.get(
+      '/search',
+      queryParameters: {
+        'page': '$page',
+        'q': query,
+      },
+    );
+
+    state = SearchModel.fromJson(packageResponse.data);
   }
 }
 
-final searchState = StateNotifierProvider<SearchState, List<AllPackagesResponse>>((ref)  {
+final searchStateProvider =
+    StateNotifierProvider<SearchState, SearchModel?>((ref) {
   return SearchState();
 });
+
+
+
+
+
+
+
+
+
+
+
+
+
+
+// Future<void> search({
+//     required int page,
+//     required String query,
+//   }) async {
+//     if (query.isEmpty) {
+//       state = null;
+//       return;
+//     }
+
+//     final Dio dio = Dio(
+//       BaseOptions(baseUrl: "https://pub.dartlang.org/api/"),
+//     );
+
+//     final packageResponse = await dio.get(
+//       'search',
+//       queryParameters: {
+//         'page': '$page',
+//         'q': query,
+//       },
+//     );
+
+//     state = SearchModel.fromJson(packageResponse.data);
+//   }
+
+
+// final searchStateProvider =
+//     StateNotifierProvider<SearchState, SearchModel?>((ref) {
+//   return SearchState();
+// });

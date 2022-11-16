@@ -4,6 +4,7 @@ import 'package:flutter_riverpod/flutter_riverpod.dart';
 import 'package:go_router/go_router.dart';
 import 'package:vip_number/app/modules/auth/login.dart';
 import 'package:vip_number/app/modules/data/package/view.dart';
+import 'package:vip_number/app/modules/data/search/view.dart';
 
 import 'modules/auth/firebase_auth/service.dart';
 import 'modules/home/view.dart';
@@ -40,6 +41,12 @@ final routerProvider = Provider<GoRouter>(
             return PackageView(
               packageName: state.queryParams['packageName']!,
             );
+          },
+        ),
+        GoRoute(
+          path: '/search',
+          builder: (context, state) {
+            return const SearchView();
           },
         ),
         GoRoute(

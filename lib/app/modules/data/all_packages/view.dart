@@ -1,8 +1,13 @@
 import 'package:flutter/material.dart';
 import 'package:flutter_riverpod/flutter_riverpod.dart';
+import 'package:go_router/go_router.dart';
 import 'package:vip_number/app/modules/data/card.dart';
 
 import 'provider.dart';
+
+const kHomePageGreyFontsColor = TextStyle(
+  color: Color(0xFF868c93),
+);
 
 class PackagesView extends ConsumerWidget {
   const PackagesView({
@@ -11,14 +16,8 @@ class PackagesView extends ConsumerWidget {
 
   @override
   Widget build(BuildContext context, WidgetRef ref) {
-    String packageName = '';
-
     final height = MediaQuery.of(context).size.height;
-
-    final width = MediaQuery.of(context).size.width;
-
     final snapshot = ref.watch(packageListProvider);
-
     return snapshot.when(
       data: (response) => response != null
           ? Scaffold(
@@ -30,9 +29,9 @@ class PackagesView extends ConsumerWidget {
                   }
                 },
                 child: ListView(children: [
-                  Stack(children: [
+                  Stack(alignment: AlignmentDirectional.centerEnd, children: [
                     Container(
-                      height: height * 0.60,
+                      height: height * 0.61,
                       decoration: const BoxDecoration(
                         image: DecorationImage(
                           fit: BoxFit.cover,
@@ -42,60 +41,113 @@ class PackagesView extends ConsumerWidget {
                       ),
                     ),
                     Positioned(
-                      left: width / 4.7,
-                      top: height / 5.7,
-                      height: height / 25,
-                      width: width / 5,
-                      child: Container(
-                        decoration: const BoxDecoration(
-                          image: DecorationImage(
-                            fit: BoxFit.fitHeight,
-                            image: AssetImage('assets/images/dart_icon.png'),
+                      child: Column(
+                        children: [
+                          Row(
+                            mainAxisAlignment: MainAxisAlignment.center,
+                            children: [
+                              Container(
+                                decoration: const BoxDecoration(
+                                  image: DecorationImage(
+                                    fit: BoxFit.fitHeight,
+                                    image: AssetImage(
+                                        'assets/images/dart_icon.png'),
+                                  ),
+                                ),
+                              ),
+                              const Text(
+                                'pub.dev',
+                                style: TextStyle(
+                                  color: Colors.white,
+                                ),
+                                textScaleFactor: 2.8,
+                              ),
+                            ],
                           ),
-                        ),
-                      ),
-                    ),
-                    Positioned(
-                      left: width / 2.5,
-                      top: height / 7,
-                      height: height / 10,
-                      width: width,
-                      child: Row(
-                        children: const [
-                          Text(
-                            'pub.dev',
-                            style: TextStyle(
-                              color: Colors.white,
+                          const SizedBox(
+                            height: 40.0,
+                          ),
+                          Padding(
+                            padding:
+                                const EdgeInsets.symmetric(horizontal: 20.0),
+                            child: TextFormField(
+                              autofocus: false,
+                              onTap: () {
+                                context.push('/search');
+                              },
+                              decoration: const InputDecoration(
+                                contentPadding: EdgeInsets.all(1.0),
+                                hintText: 'Search packgaes',
+                                hintStyle: kHomePageGreyFontsColor,
+                                prefixIcon: Icon(Icons.search),
+                                fillColor: Color(0xff35404d),
+                                filled: true,
+                                border: OutlineInputBorder(
+                                  borderSide: BorderSide.none,
+                                  borderRadius: BorderRadius.all(
+                                    Radius.circular(40.0),
+                                  ),
+                                ),
+                              ),
                             ),
-                            textScaleFactor: 2.9,
                           ),
+                          const SizedBox(
+                            height: 35.0,
+                          ),
+                          const Padding(
+                            padding: EdgeInsets.symmetric(horizontal: 12.0),
+                            child: Text(
+                              'The official package repository for Dart and Flutter apps.',
+                              textScaleFactor: 1.3,
+                              textAlign: TextAlign.center,
+                              style: TextStyle(color: Colors.white),
+                            ),
+                          ),
+                          const SizedBox(
+                            height: 30.0,
+                          ),
+                          Row(
+                            mainAxisAlignment: MainAxisAlignment.center,
+                            children: const [
+                              Text(
+                                'supported by ',
+                                textScaleFactor: 1.2,
+                                style: kHomePageGreyFontsColor,
+                              ),
+                              Text('Google',
+                                  textScaleFactor: 2.7,
+                                  style: kHomePageGreyFontsColor),
+                            ],
+                          )
                         ],
                       ),
                     ),
-                    Positioned(
-                      left: width / 12,
-                      top: height / 3.7,
-                      height: height / 17,
-                      width: width / 1.2,
-                      child: TextField(
-                        onEditingComplete: () {},
-                        decoration: const InputDecoration(
-                          hintText: 'Search packgaes',
-                          prefixIcon: Icon(Icons.search),
-                          fillColor: Color(0xff35404d),
-                          filled: true,
-                          border: OutlineInputBorder(
-                            borderSide: BorderSide.none,
-                            borderRadius:
-                                BorderRadius.all(Radius.circular(40.0)),
-                          ),
-                        ),
+                  ]),
+                  const SizedBox(
+                    height: 30.0,
+                  ),
+                  const Padding(
+                    padding: EdgeInsets.symmetric(horizontal: 18.0),
+                    child: Text(
+                      'Flutter Favorites',
+                      textScaleFactor: 2.7,
+                      style: TextStyle(
+                        color: Color(0xFF254b77),
                       ),
                     ),
-                  ]),
+                  ),
+                  const SizedBox(
+                    height: 30.0,
+                  ),
                   ...response.packages
                           ?.map(
-                            (data) => DataCard(data: data),
+                            (data) => Padding(
+                              padding: const EdgeInsets.symmetric(
+                                horizontal: 16.0,
+                                vertical: 1.3,
+                              ),
+                              child: DataCard(package: data),
+                            ),
                           )
                           .toList() ??
                       [],
@@ -104,7 +156,7 @@ class PackagesView extends ConsumerWidget {
             )
           : const Text("package not found"),
       error: (error, stackTrace) => Text(error.toString()),
-      loading: () => const CircularProgressIndicator(),
+      loading: () => const Center(child: CircularProgressIndicator()),
     );
   }
 }

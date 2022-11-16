@@ -1,0 +1,34 @@
+{"packages": [
+    {
+        "package": "riverpod"
+    },
+    {
+        "package": "hooks_riverpod"
+    },
+    {
+        "package": "flutter_riverpod"
+    },
+    {
+        "package": "riverbloc"
+    },
+    {
+        "package": "riverpod_infinite_scroll"
+    },
+    {
+        "package": "riverpod_navigator"
+    },
+    {
+        "package": "state_notifier_test"
+    },
+    {
+        "package": "shared_preferences_riverpod"
+    },
+    {
+        "package": "riverpod_extension"
+    },
+    {
+        "package": "riverpod_context"
+    }
+],
+"next": "https://pub.dartlang.org/api/search?page=2&q=riverpod"
+}

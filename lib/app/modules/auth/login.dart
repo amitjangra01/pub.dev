@@ -30,13 +30,13 @@ class LogInScreen extends ConsumerWidget {
     return signUp;
   }
 
-  Future<String?> _recoverPassword(String data) async {
-    if (data.isEmpty) {
+  Future<String?> _recoverPassword(String email) async {
+    if (email.isEmpty) {
       return ('email is required');
     }
 
     try {
-      await FirebaseAuth.instance.sendPasswordResetEmail(email: data);
+      await FirebaseAuth.instance.sendPasswordResetEmail(email: email);
       return null;
     } on FirebaseAuthException catch (e) {
       return "${e.code}: ${e.message}";

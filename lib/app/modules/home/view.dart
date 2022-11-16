@@ -148,7 +148,7 @@ class HomeView extends ConsumerWidget {
             ],
           ),
         ),
-        body: const PackagesView(),
+        body:  PackagesView(),
       ),
     );
   }
