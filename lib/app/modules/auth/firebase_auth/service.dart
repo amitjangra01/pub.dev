@@ -50,8 +50,10 @@ class FirebaseAuthentication extends StateNotifier<User?> {
   }
 
   //SIGN IN METHOD
-  Future<UserCredential?> signIn(
-      {required String email, required String password}) async {
+  Future<UserCredential?> signIn({
+    required String email,
+    required String password,
+  }) async {
     try {
       UserCredential userCredential = await _auth.signInWithEmailAndPassword(
           email: email, password: password);
